@@ -4,18 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F3DADA"
     tools:context=".MainActivity">
 
     <EditText
         android:id="@+id/Name"
-        android:layout_width="291dp"
-        android:layout_height="51dp"
+        android:layout_width="374dp"
+        android:layout_height="59dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="128dp"
         android:ems="10"
+        android:hint="Имя"
         android:inputType="textPersonName"
         android:maxLength="50"
-        android:text="Имя"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -23,10 +24,11 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="395dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="401dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="48dp"
+        android:fontFamily="@font/amethysta"
         android:text="Введите данные для расчёта вашей зарплаты"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,38 +36,27 @@
 
     <EditText
         android:id="@+id/Age"
-        android:layout_width="282dp"
-        android:layout_height="45dp"
+        android:layout_width="378dp"
+        android:layout_height="44dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="25dp"
         android:ems="10"
+        android:hint="Возраст"
         android:inputType="number"
-        android:text="Age"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Weight"
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="172dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="16dp"
+        android:onClick="main"
         android:text="Посчитать"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Age" />
-
-    <EditText
-        android:id="@+id/Salary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/textView3"
@@ -80,28 +71,38 @@
 
     <EditText
         android:id="@+id/Height"
-        android:layout_width="291dp"
-        android:layout_height="47dp"
+        android:layout_width="373dp"
+        android:layout_height="51dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="18dp"
         android:ems="10"
+        android:hint="Рост"
         android:inputType="number"
-        android:text="Рост"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Name"
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/Weight"
-        android:layout_width="286dp"
-        android:layout_height="42dp"
+        android:layout_width="376dp"
+        android:layout_height="45dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="11dp"
         android:ems="10"
+        android:hint="Вес"
         android:inputType="number"
-        android:text="Вес"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Height"
         tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/Salary"
+        android:layout_width="201dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
