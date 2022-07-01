@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
-import java.lang.Math.ceil
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,39 +13,30 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun main(view: View) {
-        val name = findViewById<TextView>(R.id.Name).text.toString().length
+        val name = findViewById<TextView>(R.id.Name).text.toString()
         val height = Integer.parseInt(findViewById<TextView>(R.id.Height).text.toString())
-        val weight = Integer.parseInt(findViewById<TextView>(R.id.Weight).text.toString()).toDouble()
+        val weight = (findViewById<TextView>(R.id.Weight).text.toString()).toDouble()
         val age = Integer.parseInt(findViewById<TextView>(R.id.Age).text.toString())
         val btn = findViewById<Button>(R.id.button)
-        if (name in 1..50) {
-            if (height in 1..250) {
-                if (weight in 1.0..250.0) {
-                    if (age in 1..150) {
-                        var salary = (height + ceil(weight)) * age * name
-                        btn.setOnClickListener(){
-                            var result = findViewById<TextView>(R.id.Salary)
-                            result.setText(salary.toString())
-                        }
-                    } else {
-                        errorData()
-                    }
-                } else {
-                    errorData()
-                }
-            } else {
-                errorData()
+
+        if (name.length > 0 && height in 1..250 && (weight > 0 && weight < 250) && age in 1..150) {
+            var salary = (height + weight) * age * name.length
+            btn.setOnClickListener(){
+                var result = findViewById<TextView>(R.id.Salary)
+                result.setText(salary.toString())
             }
-        } else {
-            errorData()
+        } else if (name.length == 0 || height == null || weight == null || age == null) {
+            btn.setOnClickListener() {
+                var result = findViewById<TextView>(R.id.Salary)
+                result.setText("Данные не введены")
+            }
+        }else {
+            btn.setOnClickListener() {
+                var result = findViewById<TextView>(R.id.Salary)
+                result.setText("Данные введены некорректно")
+            }
         }
 
-    }
-    fun errorData(){
-        val btn = findViewById<Button>(R.id.button)
-        btn.setOnClickListener() {
-            var result = findViewById<TextView>(R.id.Salary)
-            result.setText("Данные введены некорректно")
-        }
+
     }
 }
