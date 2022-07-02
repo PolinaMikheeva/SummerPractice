@@ -13,30 +13,33 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun main(view: View) {
+
+        val h = findViewById<TextView>(R.id.Height).text.toString()
+        val w = findViewById<TextView>(R.id.Weight).text.toString()
+        val a = findViewById<TextView>(R.id.Age).text.toString()
+
         val name = findViewById<TextView>(R.id.Name).text.toString()
-        val height = Integer.parseInt(findViewById<TextView>(R.id.Height).text.toString())
-        val weight = (findViewById<TextView>(R.id.Weight).text.toString()).toDouble()
-        val age = Integer.parseInt(findViewById<TextView>(R.id.Age).text.toString())
+        val height = Integer.parseInt(h)
+        val weight = w.toDouble()
+        val age = Integer.parseInt(a)
         val btn = findViewById<Button>(R.id.button)
 
-        if (name.length > 0 && height in 1..250 && (weight > 0 && weight < 250) && age in 1..150) {
+        if (name.isEmpty() || h.isEmpty() || w.isEmpty() || a.isEmpty()) {
+            btn.setOnClickListener() {
+                var result = findViewById<TextView>(R.id.Salary)
+                result.text = "Данные не введены"
+            }
+        } else if (name.isNotEmpty() && height in 1..250 && (weight > 0 && weight < 250) && age in 1..150) {
             var salary = (height + weight) * age * name.length
             btn.setOnClickListener(){
                 var result = findViewById<TextView>(R.id.Salary)
-                result.setText(salary.toString())
+                result.text = salary.toString()
             }
-        } else if (name.length == 0 || height == null || weight == null || age == null) {
+        } else {
             btn.setOnClickListener() {
                 var result = findViewById<TextView>(R.id.Salary)
-                result.setText("Данные не введены")
-            }
-        }else {
-            btn.setOnClickListener() {
-                var result = findViewById<TextView>(R.id.Salary)
-                result.setText("Данные введены некорректно")
+                result.text = "Данные введены некорректно"
             }
         }
-
-
     }
 }
