@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Task1</string>
+    <string name="age">age</string>
+    <string name="text">Введите данные о себе для расчёта зарплаты</string>
+    <string name="count">Посчитать</string>
+    <string name="name">Имя</string>
+    <string name="height">Рост</string>
+</resources>
