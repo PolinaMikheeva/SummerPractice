@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mainFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_android_24"
+        android:title="@string/menu_main"/>
+    <item
+        android:id="@+id/profileFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="@string/menu_profile" />
+    <item
+        android:id="@+id/photoFragment"
+        android:icon="@drawable/ic_baseline_crop_original_24"
+        android:enabled="true"
+        android:title="@string/menu_photo" />
+    <item
+        android:id="@+id/petsFragment"
+        android:icon="@drawable/ic_baseline_pets_24"
+        android:enabled="true"
+        android:title="@string/menu_pets" />
+    <item
+        android:id="@+id/calendarFragment"
+        android:icon="@drawable/ic_baseline_calendar_month_24"
+        android:enabled="true"
+        android:title="@string/menu_calendar" />
+</menu>

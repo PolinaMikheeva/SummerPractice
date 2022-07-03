@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Task2</string>
+
+    <string name="menu_profile">Profile</string>
+    <string name="menu_photo">Photo</string>
+    <string name="menu_main">Menu</string>
+    <string name="menu_pets">Pets</string>
+    <string name="menu_calendar">Calendar</string>
+</resources>
