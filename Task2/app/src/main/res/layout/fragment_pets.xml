@@ -2,8 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
         android:id="@+id/textView"
@@ -23,8 +22,7 @@
         android:layout_marginTop="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img"
-        tools:ignore="MissingConstraints" />
+        app:srcCompat="@drawable/img" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -33,7 +31,6 @@
         android:layout_marginTop="34dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="@drawable/img_1"
-        tools:ignore="MissingConstraints" />
+        app:srcCompat="@drawable/img_1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,18 +11,6 @@
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
-            android:id="@+id/action_mainFragment_to_calendarFragment"
-            app:destination="@id/calendarFragment" />
-        <action
-            android:id="@+id/action_mainFragment_to_petsFragment"
-            app:destination="@id/petsFragment" />
-        <action
-            android:id="@+id/action_mainFragment_to_photoFragment"
-            app:destination="@id/photoFragment" />
-        <action
-            android:id="@+id/action_mainFragment_to_profileFragment"
-            app:destination="@id/profileFragment" />
-        <action
             android:id="@+id/action_mainFragment_to_snackFragment"
             app:destination="@id/snackFragment" />
     </fragment>
